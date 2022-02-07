@@ -1,0 +1,59 @@
+<div class="graybg">
+  <div class="container-fluid ">
+
+    <div class="container login-container clear-padding">
+      <div class="col-lg-8 float-left login-into col-sm-12 col-md-6">
+        <div class="login-into-content pl-5">
+          <h1>Mobile Ad Tech for <br>In-Car Media</h1>
+          <p class="login-into-text">
+            Strengthen advertising effectiveness and enrich<br>
+            sales conversations out of the box.
+          </p>
+          <div class="col clear-padding vist-btn-container  mt-4">
+            <a href="#" class="visit vistalredy">
+              Visit Website
+            </a>
+            <a href="#" class="visit">
+              Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 float-left">
+        <div class="col text-center  login-logo">
+          <img src="assets/img/drive-time-logo.png">
+        </div>
+
+        <div class="col mt-5">
+          <form class="login-form mb-3" [formGroup]="loginForm" (ngSubmit)="tryLogin()" >
+            <input type="text" name="email" class="form-control" placeholder="Username" formControlName="userNameFormField"
+                   >
+            <!--<div *ngIf="emailField.invalid && (emailField.dirty )"-->
+            <!--&gt;-->
+
+              <!--<div *ngIf="emailField.errors.required">-->
+                <!--Email is required.-->
+              <!--</div>-->
+
+            <!--</div>-->
+            <input type="password" name="password" class="form-control mt-3" placeholder="Password" formControlName="passwordFormField"
+                   >
+
+
+            <a routerLink="/forgot-password" class="forget">Forget password?</a>
+            <div class="clearfix"></div>
+            <button class="btn login-btn mt-3" type="submit" [disabled]="!loginForm.valid" >Login</button>
+          </form>
+          <p class="text-center signup-link mt-2">Don't have an Account? <a routerLink="/signup"
+                                                                            routerLinkActive="active">Sign up</a></p>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<ngx-spinner></ngx-spinner>

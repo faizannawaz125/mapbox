@@ -1,0 +1,70 @@
+
+<head> 
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+<style> 
+body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:100%;}
+</style>
+</head>
+
+<!-- <div class="row">
+    <div class="col dt-content pb-0">
+        <div class="row GeoPathCont pb-4 mt-0"> -->
+			<!-- <div class="col-12" *ngIf="!isBillBoard">
+            	<div class="col-4 mt-1 ml-0 pl-0">
+                    <h1>Area Calculation Tool</h1>
+                    <p>This tool calculates area of polygon.</p>
+                </div>
+                <div class="col-8 mt-0"></div>
+            </div> -->
+			<!-- <div class="col-12" *ngIf="!isBillBoard">
+            	<div class="p-0"> -->
+                <!-- <p class="mt-4 mb-3">At the start of your campaign we will start tracking users (by mobile device ID) who drive past these and add them to your target list.</p> -->
+                
+                <!--Right Form-->
+                <!-- <div class="col-4 float-right"> -->
+                    
+                    <!-- <div class="GeoFormWrapper GeoOPathMepSec">
+						
+                        <div class=" row" *ngIf="!customBillBoard && !isBillBoard">
+							<div class="col-sm-12 col-md-12 mb-1 pb-1 mt-2">
+								<input [(ngModel)]="FullAddress" id="address" placeholder="Search Address"  autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
+                                <textarea style = "min-height: 250px; margin-top: 10px;" [(ngModel)]="string" id="textArea" placeholder="Logs"  autocapitalize="off" spellcheck="off" type="text" class="form-control" #textarea ></textarea>
+							</div>
+                            <div style = "padding-left: 12px;" class="DriveByLocCont">
+                                <button type="button" (click)="clearButton()" class="btn btn-normal">Clear</button>
+                            </div>
+						</div>
+                    </div> -->
+                <!-- </div> -->
+                <!---->             
+
+                <div id = "map" class = "Svg-RRAS-Container-zipMap"></div>
+                <div id="map-style-menu" class="map-style-menu">
+                    <select class="form-control" (change)="onStyleChange($event.target.value)" [(ngModel)]="style" >
+                        <option value='faizan4fine/ckzcxz04q006415pcbst6g9zx'>Satellite</option>
+                        <option value='faizan4fine/ckzcyaer7004a14p8yvmyj8ad'>Light</option>
+                        <option value='faizan4fine/ckzd3dbrf001z15lp2fpmzryv'>Dark</option>
+                        <option value='mapbox/streets-v11'>Streets</option>
+                        <option value='mapbox/outdoors-v11'>Outdoors</option>
+                      </select>
+                </div>				
+<!--                
+                </div>
+            </div> -->
+			
+    <!-- </div>
+	</div>
+</div> -->
+
+
+
+
+
+
+
+
+
+  
+<!-- <router-outlet></router-outlet> -->

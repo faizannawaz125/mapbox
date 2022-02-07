@@ -1,0 +1,48 @@
+<div class="container">
+	<div class="row">
+	
+    <video autoplay loop id="video-background" muted plays-inline>
+		<source src="assets/img/10947875-lowres.mov" type="video/mp4">
+	</video>
+    	
+        <!--Login Box-->      
+    	<div class="LoginBox LoginTopSpace">
+            
+            <h1><img title="Quorum" src="assets/img/quorum-logo.png"></h1>
+			
+            <!--Form-->
+            <!-- pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" -->
+            <div class="col">
+            <form class="login-form mb-3 LoginForm" [formGroup]="loginForm" (ngSubmit)="tryLogin()" >
+            	<input type="text" name="email" class="form-control" placeholder="Username" formControlName="userNameFormField" [ngClass]="{ 'is-invalid': submitted && errorLoginEmail.errors }">
+				<div *ngIf="submitted && errorLoginEmail.errors" style="color: red;" class="validation-text mwk-validation-error form-text">
+					<strong *ngIf="errorLoginEmail.errors.required">Please enter email or username</strong>
+					<!-- <strong *ngIf="errorLoginEmail.errors.pattern">Please enter a valid email.</strong> -->
+				</div>
+                <!--<div *ngIf="emailField.invalid && (emailField.dirty )"-->
+                <!--&gt;-->
+                
+                <!--<div *ngIf="emailField.errors.required">-->
+                <!--Email is required.-->
+                <!--</div>-->
+                
+                <!--</div>-->
+            	<input type="password" name="password" class="form-control mt-3" placeholder="Password" formControlName="passwordFormField" [ngClass]="{ 'is-invalid': submitted && errorLoginPassword.errors }">
+				<div *ngIf="submitted && errorLoginPassword.errors" style="color: red;" class="validation-text mwk-validation-error form-text">
+					<strong *ngIf="errorLoginPassword.errors.required">Please Enter Passowrd</strong>
+				</div>
+            	<div><button class="btn login-btn mt-2" type="submit" >Login</button></div>
+            </form>
+                       
+            <p class="text-center signup-link mt-3"><a routerLink="/forgot-password">Forgot Password?</a></p>
+            <p class="text-center signup-link mb-5">Don't have an Account? <a routerLink="/signup" routerLinkActive="active">Sign Up</a></p>
+            
+            </div>
+        	<!--Form-->
+
+		</div>
+        <!--Login Box-->
+
+	</div>
+</div>
+<ngx-spinner></ngx-spinner>
